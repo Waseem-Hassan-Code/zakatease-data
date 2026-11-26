@@ -1,28 +1,300 @@
-# ZakatEase privacy policy
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy | ZakatEase</title>
+<meta name="description" content="How the ZakatEase app handles your data. Your figures stay on your phone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --malachite:#0B4D3F; --deep:#063328; --jade:#17795F; --gold:#E9CB7E; --gold-deep:#A57A26;
+    --ink:#0F2A24; --muted:#566A63; --line:#D5DFDA; --paper:#FFFFFF; --mist:#EDF2EF; --tint:#F5ECD3;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#E6EFEB; --muted:#A9C2B9; --line:#24433A; --paper:#0E1F1B; --mist:#08140F; --tint:#2A2412; --jade:#45C99A; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--mist);color:var(--ink);font:400 17px/1.65 'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif}
+  a{color:var(--jade);text-underline-offset:3px}
+  a:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:3px}
 
-Last updated: 26 November 2026
+  header{background:linear-gradient(160deg,#0F5E4C 0%,var(--malachite) 55%,var(--deep) 100%);color:#fff;position:relative;overflow:hidden}
+  header svg.pattern{position:absolute;inset:0;width:100%;height:100%;opacity:.09}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;position:relative}
+  .brand{display:flex;align-items:center;gap:10px;padding-top:28px;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px;color:#F4EFE2}
+  header h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(34px,6vw,48px);line-height:1.1;letter-spacing:-.5px;margin:40px 0 10px}
+  .updated{color:var(--gold);font-weight:600;font-size:15px;margin:0;padding-bottom:88px}
 
-ZakatEase is a Zakat, Fitrana and Sadaqah calculator made by Waseem (contact: YOUR-EMAIL). This policy explains what data the app uses.
+  main .wrap{margin-top:-56px}
+  .summary{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px 26px;box-shadow:0 10px 30px rgba(11,58,48,.10)}
+  .summary h2{margin:0 0 14px;font-size:19px}
+  .summary ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .summary li{display:flex;gap:12px;align-items:flex-start}
+  .summary li svg{flex-shrink:0;margin-top:3px}
 
-## Data that stays on your phone
-Everything you enter (amounts, gold and silver, payments, donations, Fitrana details, family profiles and settings) is stored only on your device. There is no account and no sign-in, and we have no server that receives this data. Backup files are created only when you choose to, and you decide where to save them.
+  article{padding:40px 0 24px}
+  article p,article li{max-width:68ch}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-.2px;margin:44px 0 10px}
+  h3{font-size:17px;margin:24px 0 4px}
+  ul.plain{padding-left:20px}
+  ul.plain li{margin:6px 0}
 
-## Data used by services in the app
-- **Prices:** to show gold, silver and currency prices, the app requests public price data from gold-api.com, open.er-api.com, currency-api (served by jsDelivr and Cloudflare Pages) and jsDelivr. These requests contain no personal data, but like any web request they reveal your IP address to those services.
-- **Ads (Google AdMob):** the free version shows small banner ads. Google may collect your IP address (approximate location), device identifiers such as the advertising ID, app interactions and diagnostic data for advertising, analytics and fraud prevention. In the European Economic Area, the UK and Switzerland you are asked for consent first, and you can change it in Settings, Ad privacy choices. See https://policies.google.com/technologies/ads
-- **Purchases (Google Play and RevenueCat):** if you buy ZakatEase Pro, Google Play processes the payment and RevenueCat records the purchase with an anonymous ID so Pro can be restored. We never see your card details. See https://www.revenuecat.com/privacy
+  .table-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+  table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5;min-width:560px}
+  th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+  th{font-weight:700;color:var(--muted);font-size:13px;background:var(--mist)}
+  tr:last-child td{border-bottom:0}
+  td:first-child{font-weight:700;white-space:nowrap}
 
-## Notifications
-Reminders and price notifications are scheduled on your device.
+  .note{background:var(--tint);border-radius:14px;padding:14px 18px;font-size:15px}
+  .contact{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px 26px;margin-top:16px}
+  .contact a{font-weight:700;font-size:18px;word-break:break-all}
+  footer{color:var(--muted);font-size:14px;padding:32px 0 48px;border-top:1px solid var(--line);margin-top:40px}
+</style>
+</head>
+<body>
+<header>
+  <svg class="pattern" aria-hidden="true">
+    <defs><pattern id="p" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M32 12.8 L36.1 22.1 L45.6 18.4 L41.9 27.9 L51.2 32 L41.9 36.1 L45.6 45.6 L36.1 41.9 L32 51.2 L27.9 41.9 L18.4 45.6 L22.1 36.1 L12.8 32 L22.1 27.9 L18.4 18.4 L27.9 22.1 Z" fill="none" stroke="#DDB35A" stroke-width="1.2"/>
+    </pattern></defs>
+    <rect width="100%" height="100%" fill="url(#p)"/>
+  </svg>
+  <div class="wrap">
+    <div class="brand">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBEFC6"/><stop offset=".55" stop-color="#DDB35A"/><stop offset="1" stop-color="#9A6F24"/></linearGradient></defs>
+        <path d="M58 14 A38 38 0 1 0 88 66 A30 30 0 1 1 58 14 Z" fill="url(#g)"/>
+        <path d="M72 27 L74.6 32.7 L80.6 31.4 L78.1 37 L83 41 L77 42 L76.3 48.2 L72 44 L67.7 48.2 L67 42 L61 41 L65.9 37 L63.4 31.4 L69.4 32.7 Z" fill="url(#g)"/>
+      </svg>
+      ZakatEase
+    </div>
+    <h1>Privacy policy</h1>
+    <p class="updated">Last updated 26 November 2026</p>
+  </div>
+</header>
 
-## Children
-ZakatEase is not directed at children under 13.
+<main>
+  <div class="wrap">
+    <section class="summary" aria-labelledby="glance">
+      <h2 id="glance">At a glance</h2>
+      <ul>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17795F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><strong>No account, no sign-in.</strong> You never give us your name, email or phone number.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17795F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><strong>Your figures stay on your phone.</strong> We have no server that receives your wealth, payments or donations.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17795F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><strong>The app goes online for three things only:</strong> prices, ads in the free version, and the Pro purchase.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17795F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><strong>We never sell your data</strong>, and we never see your card details.</span></li>
+      </ul>
+    </section>
 
-## Your choices
-You can reset or delete your advertising ID in Android settings, change ad consent in the app, and delete all app data by clearing the app's storage or uninstalling it.
+    <article>
+      <p>ZakatEase is a Zakat, Fitrana and Sadaqah calculator for Android, made by Waseem Hassan in Pakistan. This policy explains what data the app uses, where it goes and the choices you have. It applies to the ZakatEase app on Google Play.</p>
 
-## Changes
-If this policy changes, the new version will be posted on this page with a new date.
+      <h2>Data that stays on your phone</h2>
+      <p>Everything you enter is stored only on your device. This includes your amounts, gold and silver, Zakat payments, donations and who they went to, Fitrana details, family profiles and settings.</p>
+      <ul class="plain">
+        <li>There is no account and nothing is uploaded to us.</li>
+        <li>Backup files are made only when you choose to make one, and you decide where to save them (for example Google Drive). They are never sent to us.</li>
+        <li>PDF reports are created on your phone and shared only where you send them.</li>
+        <li>Reminders and price notifications are scheduled on your phone.</li>
+      </ul>
 
-## Contact
-waseemhassankhhatak@gmail.com
+      <h2>Services the app connects to</h2>
+      <p>These outside services receive some data when the app uses them. Each has its own privacy policy.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Service</th><th scope="col">What it receives</th><th scope="col">Why</th></tr></thead>
+          <tbody>
+            <tr><td>Price services</td><td>A request for public prices. No personal data, but like any web request it shows your IP address. Providers: gold-api.com, open.er-api.com, currency-api (via jsDelivr and Cloudflare Pages) and jsDelivr.</td><td>To show gold, silver and currency prices and today's nisab</td></tr>
+            <tr><td><a href="https://policies.google.com/technologies/ads">Google AdMob</a></td><td>IP address (which gives an approximate location), device identifiers such as the advertising ID, app interactions and diagnostic data</td><td>To show banner ads in the free version, measure them and prevent fraud</td></tr>
+            <tr><td><a href="https://policies.google.com/privacy">Google Play</a></td><td>Your payment, handled entirely by Google</td><td>To process the one-time ZakatEase Pro purchase</td></tr>
+            <tr><td><a href="https://www.revenuecat.com/privacy">RevenueCat</a></td><td>An anonymous ID and your purchase record</td><td>To confirm and restore ZakatEase Pro</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">ZakatEase Pro removes ads. With Pro, the app no longer requests ads from Google AdMob.</p>
+
+      <h2>Ads and consent</h2>
+      <p>If you are in the European Economic Area, the United Kingdom or Switzerland, the app asks for your consent before personalised ads are shown. You can change your choice at any time in the app under <strong>Settings, Ad privacy choices</strong>.</p>
+
+      <h2>Your choices</h2>
+      <ul class="plain">
+        <li>Reset or delete your advertising ID in your phone's settings (Settings, Google, Ads).</li>
+        <li>Change ad consent in the app's settings.</li>
+        <li>Delete all your app data by clearing the app's storage or uninstalling it. Because we hold no copy, this removes it completely, apart from any backup files you saved yourself.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>ZakatEase is meant for adults and is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+      <h2>Security</h2>
+      <p>All connections the app makes use encrypted HTTPS. Your records are protected by Android's app storage, which other apps cannot read.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new date at the top.</p>
+
+      <h2>Contact</h2>
+      <div class="contact">
+        <p style="margin:0 0 6px">Questions about this policy or your data:</p>
+        <a href="mailto:waseemhassankhhatak@gmail.com">waseemhassankhhatak@gmail.com</a>
+      </div>
+    </article>
+
+    <footer>ZakatEase. Made in Pakistan.</footer>
+  </div>
+</main>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy | ZakatEase</title>
+<meta name="description" content="How the ZakatEase app handles your data. Your figures stay on your phone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --malachite:#0B4D3F; --deep:#063328; --jade:#17795F; --gold:#E9CB7E; --gold-deep:#A57A26;
+    --ink:#0F2A24; --muted:#566A63; --line:#D5DFDA; --paper:#FFFFFF; --mist:#EDF2EF; --tint:#F5ECD3;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#E6EFEB; --muted:#A9C2B9; --line:#24433A; --paper:#0E1F1B; --mist:#08140F; --tint:#2A2412; --jade:#45C99A; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--mist);color:var(--ink);font:400 17px/1.65 'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif}
+  a{color:var(--jade);text-underline-offset:3px}
+  a:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:3px}
+
+  header{background:linear-gradient(160deg,#0F5E4C 0%,var(--malachite) 55%,var(--deep) 100%);color:#fff;position:relative;overflow:hidden}
+  header svg.pattern{position:absolute;inset:0;width:100%;height:100%;opacity:.09}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;position:relative}
+  .brand{display:flex;align-items:center;gap:10px;padding-top:28px;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px;color:#F4EFE2}
+  header h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(34px,6vw,48px);line-height:1.1;letter-spacing:-.5px;margin:40px 0 10px}
+  .updated{color:var(--gold);font-weight:600;font-size:15px;margin:0;padding-bottom:88px}
+
+  main .wrap{margin-top:-56px}
+  .summary{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px 26px;box-shadow:0 10px 30px rgba(11,58,48,.10)}
+  .summary h2{margin:0 0 14px;font-size:19px}
+  .summary ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+  .summary li{display:flex;gap:12px;align-items:flex-start}
+  .summary li svg{flex-shrink:0;margin-top:3px}
+
+  article{padding:40px 0 24px}
+  article p,article li{max-width:68ch}
+  h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-.2px;margin:44px 0 10px}
+  h3{font-size:17px;margin:24px 0 4px}
+  ul.plain{padding-left:20px}
+  ul.plain li{margin:6px 0}
+
+  .table-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:16px;background:var(--paper)}
+  table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5;min-width:560px}
+  th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}
+  th{font-weight:700;color:var(--muted);font-size:13px;background:var(--mist)}
+  tr:last-child td{border-bottom:0}
+  td:first-child{font-weight:700;white-space:nowrap}
+
+  .note{background:var(--tint);border-radius:14px;padding:14px 18px;font-size:15px}
+  .contact{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px 26px;margin-top:16px}
+  .contact a{font-weight:700;font-size:18px;word-break:break-all}
+  footer{color:var(--muted);font-size:14px;padding:32px 0 48px;border-top:1px solid var(--line);margin-top:40px}
+</style>
+</head>
+<body>
+<header>
+  <svg class="pattern" aria-hidden="true">
+    <defs><pattern id="p" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M32 12.8 L36.1 22.1 L45.6 18.4 L41.9 27.9 L51.2 32 L41.9 36.1 L45.6 45.6 L36.1 41.9 L32 51.2 L27.9 41.9 L18.4 45.6 L22.1 36.1 L12.8 32 L22.1 27.9 L18.4 18.4 L27.9 22.1 Z" fill="none" stroke="#DDB35A" stroke-width="1.2"/>
+    </pattern></defs>
+    <rect width="100%" height="100%" fill="url(#p)"/>
+  </svg>
+  <div class="wrap">
+    <div class="brand">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBEFC6"/><stop offset=".55" stop-color="#DDB35A"/><stop offset="1" stop-color="#9A6F24"/></linearGradient></defs>
+        <path d="M58 14 A38 38 0 1 0 88 66 A30 30 0 1 1 58 14 Z" fill="url(#g)"/>
+        <path d="M72 27 L74.6 32.7 L80.6 31.4 L78.1 37 L83 41 L77 42 L76.3 48.2 L72 44 L67.7 48.2 L67 42 L61 41 L65.9 37 L63.4 31.4 L69.4 32.7 Z" fill="url(#g)"/>
+      </svg>
+      ZakatEase
+    </div>
+    <h1>Privacy policy</h1>
+    <p class="updated">Last updated 26 November 2026</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="summary" aria-labelledby="glance">
+      <h2 id="glance">At a glance</h2>
+      <ul>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17795F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><strong>No account, no sign-in.</strong> You never give us your name, email or phone number.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17795F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><strong>Your figures stay on your phone.</strong> We have no server that receives your wealth, payments or donations.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17795F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><strong>The app goes online for three things only:</strong> prices, ads in the free version, and the Pro purchase.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#17795F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><strong>We never sell your data</strong>, and we never see your card details.</span></li>
+      </ul>
+    </section>
+
+    <article>
+      <p>ZakatEase is a Zakat, Fitrana and Sadaqah calculator for Android, made by Waseem Hassan in Pakistan. This policy explains what data the app uses, where it goes and the choices you have. It applies to the ZakatEase app on Google Play.</p>
+
+      <h2>Data that stays on your phone</h2>
+      <p>Everything you enter is stored only on your device. This includes your amounts, gold and silver, Zakat payments, donations and who they went to, Fitrana details, family profiles and settings.</p>
+      <ul class="plain">
+        <li>There is no account and nothing is uploaded to us.</li>
+        <li>Backup files are made only when you choose to make one, and you decide where to save them (for example Google Drive). They are never sent to us.</li>
+        <li>PDF reports are created on your phone and shared only where you send them.</li>
+        <li>Reminders and price notifications are scheduled on your phone.</li>
+      </ul>
+
+      <h2>Services the app connects to</h2>
+      <p>These outside services receive some data when the app uses them. Each has its own privacy policy.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Service</th><th scope="col">What it receives</th><th scope="col">Why</th></tr></thead>
+          <tbody>
+            <tr><td>Price services</td><td>A request for public prices. No personal data, but like any web request it shows your IP address. Providers: gold-api.com, open.er-api.com, currency-api (via jsDelivr and Cloudflare Pages) and jsDelivr.</td><td>To show gold, silver and currency prices and today's nisab</td></tr>
+            <tr><td><a href="https://policies.google.com/technologies/ads">Google AdMob</a></td><td>IP address (which gives an approximate location), device identifiers such as the advertising ID, app interactions and diagnostic data</td><td>To show banner ads in the free version, measure them and prevent fraud</td></tr>
+            <tr><td><a href="https://policies.google.com/privacy">Google Play</a></td><td>Your payment, handled entirely by Google</td><td>To process the one-time ZakatEase Pro purchase</td></tr>
+            <tr><td><a href="https://www.revenuecat.com/privacy">RevenueCat</a></td><td>An anonymous ID and your purchase record</td><td>To confirm and restore ZakatEase Pro</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">ZakatEase Pro removes ads. With Pro, the app no longer requests ads from Google AdMob.</p>
+
+      <h2>Ads and consent</h2>
+      <p>If you are in the European Economic Area, the United Kingdom or Switzerland, the app asks for your consent before personalised ads are shown. You can change your choice at any time in the app under <strong>Settings, Ad privacy choices</strong>.</p>
+
+      <h2>Your choices</h2>
+      <ul class="plain">
+        <li>Reset or delete your advertising ID in your phone's settings (Settings, Google, Ads).</li>
+        <li>Change ad consent in the app's settings.</li>
+        <li>Delete all your app data by clearing the app's storage or uninstalling it. Because we hold no copy, this removes it completely, apart from any backup files you saved yourself.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>ZakatEase is meant for adults and is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+      <h2>Security</h2>
+      <p>All connections the app makes use encrypted HTTPS. Your records are protected by Android's app storage, which other apps cannot read.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new date at the top.</p>
+
+      <h2>Contact</h2>
+      <div class="contact">
+        <p style="margin:0 0 6px">Questions about this policy or your data:</p>
+        <a href="mailto:waseemhassankhhatak@gmail.com">waseemhassankhhatak@gmail.com</a>
+      </div>
+    </article>
+
+    <footer>ZakatEase. Made in Pakistan.</footer>
+  </div>
+</main>
+</body>
+</html>
