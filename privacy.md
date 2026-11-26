@@ -289,7 +289,7 @@
       <h2>Contact</h2>
       <div class="contact">
         <p style="margin:0 0 6px">Questions about this policy or your data:</p>
-        <a href="mailto:waseemhassankhhatak@gmail.com">waseemhassankhhatak@gmail.com</a>
+        <a href="mailto:waseemhassankhatak@gmail.com">waseemhassankhhatak@gmail.com</a>
       </div>
     </article>
 
